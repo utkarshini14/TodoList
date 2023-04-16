@@ -1,6 +1,6 @@
 # TodoList
 
-TodoList helps you manage your daily tasks efficiently and help keep a track of it.
+TodoList helps you manage your daily tasks efficiently and helps keep a track of it.
 
 
 
