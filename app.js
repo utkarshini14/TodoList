@@ -6,7 +6,7 @@ import { MongoClient, ObjectId, Timestamp } from "mongodb";
 
 var i1=[];
 import bodyParser from "body-parser";
-//var mongoose = require('mongoose');
+
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -34,7 +34,13 @@ app.post("/", function(req,res)
     res.redirect("/");
 });
 
-
+app.post("/delete", async function(req,res){
+    const check=req.body.checkbox;
+    const data = await collection.deleteOne({
+        _id:new ObjectId(check),
+})
+res.redirect("/");
+});
 
 app.listen(3000, function (){
     console.log("listening on port 3000");
