@@ -13,10 +13,10 @@
     </div>        
     <div class="box">   
 <% for(var i=0;i<newListItem.length;i++){ %>  
-    <form action="/" method="post">
+    <form action="/delete" method="post">
          <div class="item">
             <div class="round">
-            <input type="checkbox"id="checkbox">            
+            <input type="checkbox" name="checkbox" value="<%=newListItem[i]._id %>" onChange="this.form.submit()" id="checkbox">            
             <label for="checkbox"></label>
             </div>
             <p><%= newListItem[i].task %></p>
